@@ -1,6 +1,13 @@
+import 'package:farming/Community.dart';
+import 'package:farming/Store.dart';
+import 'package:flutter/material.dart';
+import 'package:farming/LoginPage.dart';
+import 'package:farming/MainPage.dart';
+import 'package:farming/ProfilePage.dart';
+import 'package:farming/wheat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:farming/MainPage.dart';
+
 
 class ProfilePage extends StatelessWidget{
   @override
@@ -66,7 +73,9 @@ class ProfilePage extends StatelessWidget{
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Community()));
+                        },
                         child: Container(
                           height: 80,
                           width: 80,
@@ -98,7 +107,9 @@ class ProfilePage extends StatelessWidget{
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Store()));
+                        },
                         child: Container(
                           height: 80,
                           width: 80,

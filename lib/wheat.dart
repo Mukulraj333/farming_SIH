@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:farming/DoctorPage.dart';
 import 'package:farming/ProfilePage.dart';
 import 'package:farming/SavedData.dart';
+import 'package:farming/MainPage.dart';
 
 
 
@@ -322,7 +323,8 @@ class WheatPage extends StatelessWidget{
                                       color: Colors.grey,
                                     )
                                   ]
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     ),
@@ -489,12 +491,9 @@ class WheatPage extends StatelessWidget{
                   ],
                 ),
               ),
-
-
             ],
           ),
         ),
-
       ),
     );
   }

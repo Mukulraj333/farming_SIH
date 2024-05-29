@@ -1,8 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:farming/LoginPage.dart';
+import 'package:farming/MainPage.dart';
+import 'package:farming/ProfilePage.dart';
+import 'package:farming/wheat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:farming/MainPage.dart';
 
-class DoctorPage extends StatelessWidget{
+class DoctorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +20,6 @@ class DoctorPage extends StatelessWidget{
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               //////////////  Nav bar ///////////
 
               Padding(
@@ -54,10 +57,7 @@ class DoctorPage extends StatelessWidget{
                                 color: Colors.grey,
                               ),
                               boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey,
-                                    blurRadius: 11
-                                )
+                                BoxShadow(color: Colors.grey, blurRadius: 11)
                               ],
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -86,10 +86,7 @@ class DoctorPage extends StatelessWidget{
                                 color: Colors.grey,
                               ),
                               boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey,
-                                    blurRadius: 11
-                                )
+                                BoxShadow(color: Colors.grey, blurRadius: 11)
                               ],
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -118,10 +115,7 @@ class DoctorPage extends StatelessWidget{
                                 color: Colors.grey,
                               ),
                               boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey,
-                                    blurRadius: 11
-                                )
+                                BoxShadow(color: Colors.grey, blurRadius: 11)
                               ],
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -149,10 +143,7 @@ class DoctorPage extends StatelessWidget{
                                 color: Colors.grey,
                               ),
                               boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey,
-                                    blurRadius: 11
-                                )
+                                BoxShadow(color: Colors.grey, blurRadius: 11)
                               ],
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -166,304 +157,93 @@ class DoctorPage extends StatelessWidget{
 
               //////////////////////  Doctor Details -1  //////////////////////
 
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: CircleAvatar(
-                              backgroundImage:
-                              AssetImage('assets/images/doctor1.png'),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text(
-                                    ' NAME : SANSKAR          ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    ' ID NUMBER : 1245AS4 ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    'ADDRESS : INDIA         ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(11.0),
-                                boxShadow: [
-                                  BoxShadow(blurRadius: 10, color: Colors.grey)
-                                ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 390,
-                  height: 50,
-                  color: Colors.green,
-                  child: Center(child: Text('CALL', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),)),
-                ),
-              ),
+              doctor(),
 
               Container(
                 height: 20,
               ),
               //////////////////////  Doctor Details -2  //////////////////////
 
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: CircleAvatar(
-                              backgroundImage:
-                              AssetImage('assets/images/doctor2.png'),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text(
-                                    ' NAME : SANSKAR          ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    ' ID NUMBER : 1245AS4 ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    'ADDRESS : INDIA         ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(11.0),
-                                boxShadow: [
-                                  BoxShadow(blurRadius: 10, color: Colors.grey)
-                                ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 390,
-                  height: 50,
-                  color: Colors.green,
-                  child: Center(child: Text('CALL', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),)),
-                ),
-              ),
+              doctor(),
 
               Container(
                 height: 20,
               ),
-              //////////////////////  Doctor Details -3  //////////////////////
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: CircleAvatar(
-                              backgroundImage:
-                              AssetImage('assets/images/doctor3.jpeg'),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text(
-                                    ' NAME : SANSKAR          ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    ' ID NUMBER : 1245AS4 ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    'ADDRESS : INDIA         ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(11.0),
-                                boxShadow: [
-                                  BoxShadow(blurRadius: 10, color: Colors.grey)
-                                ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 390,
-                  height: 50,
-                  color: Colors.green,
-                  child: Center(child: Text('CALL', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),)),
-                ),
-              ),
-              Container(
-                height: 20,
-              ),
-
-              //////////////////////  Doctor Details  -4 //////////////////////
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: CircleAvatar(
-                              backgroundImage:
-                              AssetImage('assets/images/doctor4.jpeg'),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 200,
-                            width: 188,
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text(
-                                    ' NAME : SANSKAR          ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    ' ID NUMBER : 1245AS4 ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    'ADDRESS : INDIA         ',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(11.0),
-                                boxShadow: [
-                                  BoxShadow(blurRadius: 10, color: Colors.grey)
-                                ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 390,
-                  height: 50,
-                  color: Colors.green,
-                  child: Center(child: Text('CALL', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),)),
-                ),
-              ),
-              Container(
-                height: 20,
-              ),
-
-
 
               Container(),
+
+              //////////////////////  Doctor Details -3  //////////////////////
+              doctor()
             ],
           ),
         ),
       ),
     );
   }
+}
 
+////////////////////////////////////////////   Doctor Function  ///////////////////////////////////////////////////
+Container doctor(){
+  return Container(
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        // color: Colors.black,
+        height: 282,
+        width: double.infinity,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 93,
+
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 200,
+                    width: 190,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(11.0),
+                        boxShadow: [
+                          BoxShadow(blurRadius: 10, color: Colors.grey)
+                        ]
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Name :- Mukulraj',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 20),)
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 390,
+                height: 50,
+                color: Colors.green,
+                child: Center(
+                    child: Text(
+                      'CALL',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    )),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
 }

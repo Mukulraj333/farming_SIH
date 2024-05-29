@@ -1,31 +1,29 @@
-import 'package:flutter/cupertino.dart';
+import 'package:farming/Community.dart';
+import 'package:farming/Store.dart';
 import 'package:flutter/material.dart';
+import 'package:farming/LoginPage.dart';
+import 'package:farming/MainPage.dart';
 import 'package:farming/ProfilePage.dart';
 import 'package:farming/wheat.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-
-class MainPage extends StatelessWidget{
+class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
-
         title: Text('Home'),
         backgroundColor: Colors.blue,
-
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
         color: Colors.white,
-
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               ///////////////////////  Upper Container  ///////////////////////////
-
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -34,33 +32,29 @@ class MainPage extends StatelessWidget{
                   color: Colors.white,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-
                     children: [
-
                       ////////////////   Home //////////////////
 
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: InkWell(
-                          onTap: (){
+                          onTap: () {
                             print('jdhj');
                           },
                           child: Container(
                             height: 80,
                             width: 80,
                             child: Icon(
-
                               Icons.home,
                               color: Colors.black,
                               size: 70,
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              boxShadow:[
+                              boxShadow: [
                                 BoxShadow(
-                                  blurRadius:11,
+                                  blurRadius: 11,
                                   color: Colors.grey,
-
                                 ),
                               ],
                               border: Border.all(
@@ -78,7 +72,12 @@ class MainPage extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: InkWell(
-                          onTap: (){
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Community()),
+                            );
                             print('jfj');
                           },
                           child: Container(
@@ -112,8 +111,12 @@ class MainPage extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: InkWell(
-                          onTap: (){
+                          onTap: () {
                             print('sjf');
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Store()));
                           },
                           child: Container(
                             height: 80,
@@ -125,17 +128,15 @@ class MainPage extends StatelessWidget{
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              boxShadow:[
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 11,
                                   color: Colors.grey,
-
                                 ),
                               ],
                               border: Border.all(
                                 width: 2,
                                 color: Colors.grey,
-
                               ),
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -147,13 +148,12 @@ class MainPage extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: InkWell(
-                          onTap: (){
+                          onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => ProfilePage(),
                                 ));
-
                           },
                           child: Container(
                             height: 80,
@@ -165,11 +165,10 @@ class MainPage extends StatelessWidget{
                             ),
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              boxShadow:[
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 11,
                                   color: Colors.grey,
-
                                 ),
                               ],
                               border: Border.all(
@@ -192,10 +191,8 @@ class MainPage extends StatelessWidget{
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-
                     border: OutlineInputBorder(),
                     labelText: 'Search',
-
                   ),
                 ),
 
@@ -217,172 +214,92 @@ class MainPage extends StatelessWidget{
 
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print('Pat');
                         },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/patato.png'),
-                          decoration: BoxDecoration(
-                            // color: Colors.blue,
-                            borderRadius: BorderRadius.circular(55),
-                            border: Border.all(
-                              width: 3,
-                              color: Colors.grey,
-                            ),
-
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 1,
-                                color: Colors.green,
-
-                              )
-                            ],
-                          ),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/patato.png'),
+                          backgroundColor: Colors.black,
+                          radius: 55,
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print('Shiv');
                         },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/suger.png'),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 3,
-                                  color: Colors.grey
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1,
-                                  color: Colors.orangeAccent,
-
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(55)),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/suger.png'),
+                          backgroundColor: Colors.orange,
+                          radius: 55,
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print('fj');
                         },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/pop.png'),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 3,
-                                  color: Colors.grey
-                              ),
-
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1,
-                                  color: Colors.blue,
-
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(55)),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/suger.png'),
+                          backgroundColor: Colors.blue,
+                          radius: 55,
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print('jf');
                         },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/rice.png'),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 3,
-                                  color: Colors.grey
-                              ),
-
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1,
-                                  color: Colors.yellow,
-
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(55)),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/suger.png'),
+                          backgroundColor: Colors.yellowAccent,
+                          radius: 55,
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => WheatPage(),
-                              ));
-                        },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/gehu.png'),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 3,
-                                  color: Colors.grey
-                              ),
-
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1,
-                                  color: Colors.greenAccent,
-
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(55)),
-                        ),
-                      ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => WheatPage(),
+                                ));
+                          },
+                          child: CircleAvatar(
+                            backgroundImage:
+                                AssetImage('assets/images/suger.png'),
+                            backgroundColor: Colors.green,
+                            radius: 55,
+                          )),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: InkWell(
-                        onTap: (){
+                        onTap: () {
                           print('yu');
                         },
-                        child: Container(
-                          height: 110,
-                          width: 110,
-                          child: Image.asset('assets/images/banana.png'),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 3,
-                                  color: Colors.grey
-                              ),
-
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 1,
-
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(55)),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/suger.png'),
+                          backgroundColor: Colors.black,
+                          radius: 55,
                         ),
                       ),
                     ),
@@ -395,7 +312,7 @@ class MainPage extends StatelessWidget{
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onTap: (){
+                  onTap: () {
                     print('Click Image');
                   },
                   child: Container(
@@ -407,10 +324,7 @@ class MainPage extends StatelessWidget{
                           width: 3,
                           color: Colors.grey,
                         ),
-                        boxShadow: [
-
-                        ]
-                    ),
+                        boxShadow: []),
                     child: Column(
                       children: [
                         Padding(
@@ -418,7 +332,6 @@ class MainPage extends StatelessWidget{
                           child: Container(
                             height: 190,
                             width: double.infinity,
-
                             child: Icon(
                               Icons.add_a_photo,
                               size: 100,
@@ -431,16 +344,21 @@ class MainPage extends StatelessWidget{
                           child: Container(
                             height: 70,
                             width: 300,
-
-                            child: Center(child: Text('Scan Crop', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 35, color: Colors.blue),)),
+                            child: Center(
+                                child: Text(
+                              'Scan Crop',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 35,
+                                  color: Colors.blue),
+                            )),
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(15),
                                 border: Border.all(
                                   width: 2,
                                   color: Colors.grey,
-                                )
-                            ),
+                                )),
                           ),
                         ),
                       ],
@@ -457,30 +375,26 @@ class MainPage extends StatelessWidget{
                   height: 30,
                   width: 400,
                   // color: Colors.green,
-                  child: Text(' Current News....', style: TextStyle(fontSize: 25),),
+                  child: Text(
+                    ' Current News....',
+                    style: TextStyle(fontSize: 25),
+                  ),
                 ),
               ),
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 9,
-                                      color: Colors.grey
-                                  )
-                                ]
-                            ),
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(blurRadius: 9, color: Colors.grey)
+                            ]),
                             height: 190,
                             width: 260,
                             child: Image.asset('assets/images/news_2.jpg'),
@@ -493,15 +407,9 @@ class MainPage extends StatelessWidget{
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 9,
-                                      color: Colors.grey
-
-                                  )
-                                ]
-                            ),
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(blurRadius: 9, color: Colors.grey)
+                            ]),
                             height: 190,
                             width: 260,
                             child: Image.asset('assets/images/news_2.jpg'),
@@ -514,14 +422,9 @@ class MainPage extends StatelessWidget{
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 9,
-                                      color: Colors.grey
-                                  )
-                                ]
-                            ),
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(blurRadius: 9, color: Colors.grey)
+                            ]),
                             height: 190,
                             width: 260,
                             child: Image.asset('assets/images/news_3.jpeg'),
@@ -537,7 +440,6 @@ class MainPage extends StatelessWidget{
                 ),
               ),
 
-
               //////////////////////// Weather Container /////////////////////////////
 
               Padding(
@@ -545,7 +447,10 @@ class MainPage extends StatelessWidget{
                 child: Container(
                   height: 30,
                   width: 400,
-                  child: Text('  Weather....',style: TextStyle(fontSize: 25),),
+                  child: Text(
+                    '  Weather....',
+                    style: TextStyle(fontSize: 25),
+                  ),
                 ),
               ),
               Padding(
@@ -556,12 +461,20 @@ class MainPage extends StatelessWidget{
                   // color: Colors.blue,
                 ),
               ),
-
             ],
           ),
         ),
       ),
     );
   }
+}
 
+CircleAvatar crop(String image, String navigator) {
+  return CircleAvatar(
+    child: CircleAvatar(
+      backgroundColor: Colors.black,
+      backgroundImage: AssetImage('ImageAddresses'),
+      radius: 55,
+    ),
+  );
 }
