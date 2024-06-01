@@ -1,4 +1,5 @@
 import 'package:farming/Community.dart';
+import 'package:farming/CurrentNews.dart';
 import 'package:farming/Store.dart';
 import 'package:flutter/material.dart';
 import 'package:farming/LoginPage.dart';
@@ -389,19 +390,24 @@ class MainPage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            decoration: BoxDecoration(boxShadow: [
-                              BoxShadow(blurRadius: 9, color: Colors.grey)
-                            ]),
-                            height: 190,
-                            width: 260,
-                            child: Image.asset('assets/images/news_2.jpg'),
-                            // decoration: BoxDecoration(
-                            //   color: Colors.blue,
-                            //   borderRadius: BorderRadius.circular(10)
-                            // ),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> CurrentNews()));
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              decoration: BoxDecoration(boxShadow: [
+                                BoxShadow(blurRadius: 9, color: Colors.grey)
+                              ]),
+                              height: 190,
+                              width: 260,
+                              child: Image.asset('assets/images/news_2.jpg'),
+                              // decoration: BoxDecoration(
+                              //   color: Colors.blue,
+                              //   borderRadius: BorderRadius.circular(10)
+                              // ),
+                            ),
                           ),
                         ),
                         Padding(
@@ -472,7 +478,7 @@ class MainPage extends StatelessWidget {
 CircleAvatar crop(String image, String navigator) {
   return CircleAvatar(
     child: CircleAvatar(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue,
       backgroundImage: AssetImage('ImageAddresses'),
       radius: 55,
     ),

@@ -14,8 +14,20 @@ class CurrentNews extends StatelessWidget{
       appBar: AppBar(
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        color: Colors.white,
+      body: Column(
+        children: [
+          Container(
+            height: 200,
+            width: double.infinity,
+            color: Colors.black,
+            // width: 200,
+          ),
+          Container(
+            height: 75,
+            width: double.infinity,
+            color: Colors.blue,
+          ),
+        ],
       ),
     );
   }
