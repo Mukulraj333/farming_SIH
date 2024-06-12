@@ -10,12 +10,12 @@ import 'package:flutter/material.dart';
 class Weather extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-      ),
-      body: Container(
-        color: Colors.black,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 200,
+        child: Image.asset('assets/images/weather.jpg'),
+        // color: Colors.blue,
       ),
     );
   }

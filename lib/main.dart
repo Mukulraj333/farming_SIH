@@ -1,6 +1,5 @@
 import 'package:farming/Login/LoginPage.dart';
 import 'package:flutter/material.dart';
-import 'package:farming/Page/MainPage.dart';
 import 'package:flutter/cupertino.dart';
 
 

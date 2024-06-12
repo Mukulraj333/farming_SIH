@@ -1,5 +1,6 @@
 import 'package:farming/AboveBar/Community.dart';
 import 'package:farming/AboveBar/Store.dart';
+import 'package:farming/HomeScreen/UpperBar.dart';
 import 'package:flutter/material.dart';
 import 'package:farming/Login/LoginPage.dart';
 import 'package:farming/Page/MainPage.dart';
@@ -22,154 +23,11 @@ class ProfilePage extends StatelessWidget{
         height: double.infinity,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 90,
-                color: Colors.white,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ////////////////   Home //////////////////
 
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MainPage(),
-                              ));
-                        },
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          child: Icon(
-                            Icons.home,
-                            color: Colors.black,
-                            size: 70,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.grey,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey,
-                                  blurRadius: 11
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
+            /////////////////////// UpperBar /////////////////////////////
+            Upperbar(),
 
-                    ///////////////  Community  ////////////////////
 
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Community()));
-                        },
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          child: Icon(
-                            Icons.chat,
-                            size: 70,
-                            color: Colors.black,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.grey,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey,
-                                  blurRadius: 11
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    ///////////////  Store  ////////////////
-
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Store()));
-                        },
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          child: Icon(
-                            Icons.store_mall_directory,
-                            size: 70,
-                            color: Colors.black,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.grey,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey,
-                                  blurRadius: 11
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    ////////////////////  Profile  ////////////
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          child: Icon(
-                            Icons.person,
-                            size: 70,
-                            color: Colors.black,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.grey,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey,
-                                  blurRadius: 11
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
             Container(
               child: Row(
                 children: [
