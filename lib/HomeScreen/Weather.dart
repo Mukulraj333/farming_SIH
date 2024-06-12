@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:farming/LoginPage.dart';
-import 'package:farming/MainPage.dart';
-import 'package:farming/ProfilePage.dart';
-import 'package:farming/wheat.dart';
+import 'package:farming/Login/LoginPage.dart';
+import 'package:farming/Page/MainPage.dart';
+import 'package:farming/AboveBar/ProfilePage.dart';
+import 'package:farming/HomeScreen/wheat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

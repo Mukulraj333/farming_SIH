@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:farming/DoctorPage.dart';
-import 'package:farming/ProfilePage.dart';
-import 'package:farming/SavedData.dart';
-import 'package:farming/MainPage.dart';
+import 'package:farming/Page/DoctorPage.dart';
+import 'package:farming/AboveBar/ProfilePage.dart';
+import 'package:farming/Crops/SavedData.dart';
+import 'package:farming/Page/MainPage.dart';
 
 
 
